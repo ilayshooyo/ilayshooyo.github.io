@@ -2,14 +2,14 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ilays-Hooyo Organization</title>
+  <title>Ilays Hooyo Organization - Lighting the Way for Somalia's Future</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Ilays-Hooyo Organization – a community-driven initiative supporting mothers, children and youth through education, protection and livelihoods."
+    content="Ilays Hooyo Organization – a community-driven initiative supporting mothers, children and youth through education, protection and livelihoods."
   />
 
-  <!-- Google Font (optional, safe for GitHub Pages) -->
+  <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -101,18 +101,18 @@
     }
 
     .brand-logo {
-      width: 42px;
-      height: 42px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 30% 20%, #fff8e1, #f6e1a4);
-      border: 2px solid rgba(218, 165, 32, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 1.1rem;
-      color: var(--navy);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      overflow: hidden;
       box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+      flex-shrink: 0;
+    }
+
+    .brand-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .brand-text {
@@ -832,68 +832,50 @@
 
     .contact-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.7fr) minmax(0, 2.3fr);
-      gap: 1.7rem;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+      gap: 2rem;
       align-items: flex-start;
     }
 
-    .contact-card {
-      background: #111827;
-      color: var(--white);
-      border-radius: 20px;
+    .contact-info {
+      background: radial-gradient(circle at 0% 0%, #ffffff, #f3eee0);
+      border-radius: var(--radius-xl);
       padding: 1.3rem 1.2rem;
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.45);
-      font-size: 0.86rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 23, 42, 0.05);
+      display: grid;
+      gap: 0.9rem;
     }
 
-    .contact-card h3 {
-      font-size: 1rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .contact-block {
-      margin-top: 0.7rem;
+    .contact-item {
+      display: grid;
+      gap: 0.25rem;
+      font-size: 0.85rem;
     }
 
     .contact-label {
+      font-size: 0.75rem;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
-      font-size: 0.7rem;
-      color: #9ca3af;
-      margin-bottom: 0.1rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      font-weight: 600;
     }
 
     .contact-value {
-      font-size: 0.86rem;
-      color: #e5e7eb;
+      color: #111827;
     }
 
     .contact-value a {
-      color: #e5e7eb;
+      color: var(--navy);
       text-decoration: underline;
-      text-decoration-color: rgba(236, 252, 203, 0.6);
-      text-decoration-thickness: 1px;
     }
 
-    .contact-note {
-      margin-top: 0.7rem;
-      font-size: 0.8rem;
-      color: #9ca3af;
-    }
-
-    form {
-      background: rgba(255, 255, 255, 0.92);
-      border-radius: 20px;
-      padding: 1.2rem 1rem;
-      border: 1px solid rgba(148, 163, 184, 0.6);
-      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
-      font-size: 0.86rem;
-    }
-
-    .form-row {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.85rem;
+    .contact-form {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 1.3rem 1.2rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 23, 42, 0.05);
     }
 
     .form-group {
@@ -1100,11 +1082,11 @@
     <header>
       <div class="container nav">
         <div class="brand">
-          <!-- TODO: Replace this circle with your logo image if you prefer -->
-          <!-- <img src="assets/ilays-hooyo-logo.png" alt="Ilays-Hooyo logo" class="brand-logo-img" /> -->
-          <div class="brand-logo">IH</div>
+          <div class="brand-logo">
+            <img src="data:image/jpeg;base64,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IiITITCIgCIiBBERCBERChERChERAEREAREQBERAEREAREQHVuNvoblRvorjR09ZTSDD4Z4w9jvi07Kmtb9mfh/fC+osrajTlU7ceyHngz6xO2H8JCu9FnCyde8XgwlXGfzI0q1N2YuIlnlNTY6y23prDlhhkNPOPk/bPwcvC/tHx44fDuquo1VQwM2DaynNRD8i4OGPgVvkoIyMLqWuk1iaTND0kU8xbRpNZ+0/rilwy42+yXPGxJifC8/3Tj8llVD2qo+Ue36Gmz4mmr//ANmLZW76S0teOb6V05aK4u6mejjefxIysVruB/CmsJMuirawnxh54v8AK4JzNLL5q8fQcu+PSZUzO1Tpsj39HX1p8m1EJ/2STtU6dx+j0bfHH9qphH+6sWXs68JZDtpyZnoyvnH+pIeztwljOTpuWT9+vnP+tT9z/wDV/wCfcY1PdFT1/aqbyn2HQ0gPgaiv2/wsWK3btPa5qiY7bQWO256EQvmeP7xx+S2YoeCXCqjIMWibY8jxmDpf8zisptGk9L2gD6K07aaEt6GCjjYfxAyrzNLH5a/zHLvfWZpQb7x54he7TT6rrYJNuWkgdTQY9S0NGPiV7+lezDxAuswqb9XWyysecv7x5qZz8m7Z+LluiAMY8EVeukliuKQWkjnMm2Urojs2cPrE5k93iqNRVTd81p5YQfSJu394lXHQUVHb6SOkoKWClp4xhkUMYYxo9ANguwi5LLJ2PMnk3wrjD5UERFgZhERAEREAREQBERAEREATCIhGEREAREQBETKECIiFCIiDIREQoREQmQiIgCIiDIREQBERChERCZCImEGQiIgyEREGQiJhBkIiIAiIhRhERAEREAREygCIiAIiIAiJlAEREMQiIgCJsmyFCIiAIiIMBERAEREAREQBETCABMJ0RAEREAREQBERAxlERAEREGAiIgwEREGAiIhQiIgCJlEAREQBERAM+iIiECIiAIiIAiYRAEREARNk2QBERCBE2TZChE2TZCBFOFCAIiDKAIhRChERAEREARMJhAEREKEREIERMIMhEwiDIREQZCIiAIiIUIiIAiIhAiIgCJsmyAImyYQBEwiAIiZQgTCnKZQEYTCnKgoAiIhcBERCBERAEREAREQoREQBERCBERChERAEREGQiJshAibJsgCJsmyAJlNk2QBE2U5QpCKcqMoAiZTKAIiIAiIgCIiAJj1REAREQDHqiIhAiJsgCJsiFP/Z" alt="Ilays Hooyo Organization Logo" />
+          </div>
           <div class="brand-text">
-            <div class="brand-name">Ilays-Hooyo Organization</div>
+            <div class="brand-name">Ilays Hooyo Organization</div>
             <div class="brand-tagline">Nurturing hope · Protecting dignity</div>
           </div>
         </div>
@@ -1119,9 +1101,8 @@
 
         <div class="nav-cta">
           <a class="btn btn-outline" href="#impact">Our Results</a>
-          <!-- Update the href to your real PDF when ready -->
-          <a class="btn btn-primary" href="assets/Ilays-Hooyo-Profile.pdf" target="_blank">
-            Download Profile
+          <a class="btn btn-primary" href="#contact">
+            Get in Touch
           </a>
         </div>
 
@@ -1145,7 +1126,7 @@
               <span>mothers, children &amp; youth</span>.
             </h1>
             <p class="hero-subtitle">
-              Ilays-Hooyo Organization (IHO) is a non-profit, non-political and
+              Ilays Hooyo Organization (IHO) is a non-profit, non-political and
               community-driven organization working to
               <strong>protect, empower and uplift vulnerable families</strong>
               through education, protection, health and livelihoods support.
@@ -1174,7 +1155,7 @@
             </div>
           </div>
 
-          <aside class="hero-card" aria-label="Ilays-Hooyo at a glance">
+          <aside class="hero-card" aria-label="Ilays Hooyo at a glance">
             <div class="hero-card-header">
               <div class="hero-pill">
                 <span class="hero-pill-dot"></span> Active in communities
@@ -1198,24 +1179,18 @@
               </div>
               <div class="hero-card-stats">
                 <div class="hero-card-stats-row">
-                  <div class="stat-label">Families directly supported*</div>
+                  <div class="stat-label">Families directly supported</div>
                   <div class="stat-value">1,500+</div>
                 </div>
                 <div class="hero-card-stats-row">
-                  <div class="stat-label">Women &amp; girls reached*</div>
+                  <div class="stat-label">Women &amp; girls reached</div>
                   <div class="stat-value">65%</div>
                 </div>
                 <div class="hero-card-stats-row">
                   <div class="stat-label">
-                    Community volunteers trained*
+                    Community volunteers trained
                   </div>
                   <div class="stat-value">80+</div>
-                </div>
-                <div class="hero-card-stats-row">
-                  <div class="stat-label">
-                    *Illustrative figures – update with your real data
-                  </div>
-                  <div class="stat-value"></div>
                 </div>
               </div>
             </div>
@@ -1228,9 +1203,9 @@
         <div class="container">
           <div class="section-header">
             <div class="section-kicker">Who we are</div>
-            <h2 class="section-title">About Ilays-Hooyo Organization</h2>
+            <h2 class="section-title">About Ilays Hooyo Organization</h2>
             <p class="section-subtitle">
-              “Ilays-Hooyo” means the light of the mother – symbolizing care,
+              "Ilays Hooyo" means the light of the mother – symbolizing care,
               stability and hope at the heart of every family and community.
             </p>
           </div>
@@ -1238,7 +1213,7 @@
           <div class="about-grid">
             <div class="about-text">
               <p>
-                Ilays-Hooyo Organization is a Somali-led, non-profit organization
+                Ilays Hooyo Organization is a Somali-led, non-profit organization
                 committed to supporting vulnerable families – especially women,
                 children and youth – affected by conflict, displacement, poverty
                 and recurrent shocks such as droughts.
@@ -1246,46 +1221,42 @@
               <p>
                 We work hand-in-hand with communities, local authorities and
                 partners to design context-appropriate solutions that protect
-                children, empower women, and expand opportunities for youth.
+                dignity, promote education, improve health and nutrition, and
+                create sustainable livelihood opportunities.
               </p>
-
-              <ul class="about-list">
-                <li>
-                  <span>◆</span>
-                  <div>
-                    <strong>Community-rooted:</strong> founded and led by local
-                    professionals who understand the realities on the ground.
-                  </div>
-                </li>
-                <li>
-                  <span>◆</span>
-                  <div>
-                    <strong>Gender-responsive:</strong> programs designed to
-                    protect, empower and listen to women and girls.
-                  </div>
-                </li>
-                <li>
-                  <span>◆</span>
-                  <div>
-                    <strong>Child-focused:</strong> promoting safe, nurturing
-                    and inclusive environments for all children.
-                  </div>
-                </li>
-              </ul>
+              <p>
+                Our approach is rooted in community participation, gender
+                sensitivity, and the belief that lasting change comes from
+                empowering people to lead their own development.
+              </p>
 
               <div class="about-highlights">
                 <div class="about-highlight">
-                  <div class="about-highlight-title">Legal Identity</div>
+                  <div class="about-highlight-title">Community-Driven</div>
                   <p>
-                    Registered as a local NGO in Somalia in line with national
-                    regulations (insert registration details here).
+                    We co-design programs with the communities we serve,
+                    ensuring local ownership and cultural relevance.
                   </p>
                 </div>
                 <div class="about-highlight">
-                  <div class="about-highlight-title">Core Values</div>
+                  <div class="about-highlight-title">Women-Centered</div>
                   <p>
-                    Compassion, accountability, integrity, inclusion, and
-                    community ownership guide all our work.
+                    Mothers and women are at the heart of our work, recognized
+                    as agents of change and resilience.
+                  </p>
+                </div>
+                <div class="about-highlight">
+                  <div class="about-highlight-title">Evidence-Based</div>
+                  <p>
+                    We use data and community feedback to continuously improve
+                    our programs and demonstrate impact.
+                  </p>
+                </div>
+                <div class="about-highlight">
+                  <div class="about-highlight-title">Holistic Approach</div>
+                  <p>
+                    We address interconnected needs – education, protection,
+                    health, and livelihoods – for lasting change.
                   </p>
                 </div>
               </div>
@@ -1293,31 +1264,25 @@
 
             <aside class="about-card">
               <div class="about-mission">
-                <div class="pill-heading">Our mission</div>
+                <div class="pill-heading">Our Mission</div>
                 <p>
-                  To protect and empower vulnerable women, children and youth by
-                  providing inclusive services, strengthening community systems
-                  and promoting sustainable livelihoods and education.
+                  To protect, empower and uplift vulnerable women, children and
+                  youth in Somalia by providing integrated support in education,
+                  protection, health and livelihoods, fostering resilient and
+                  self-reliant communities.
                 </p>
               </div>
               <div class="about-vision">
-                <div class="pill-heading">Our vision</div>
+                <div class="pill-heading">Our Vision</div>
                 <p>
-                  A peaceful and inclusive society where every mother, child and
-                  young person lives in dignity, safety and hope, with equal
-                  access to opportunities.
+                  A Somalia where every mother, child and young person can live
+                  with dignity, safety and hope, and where communities thrive
+                  through equity, education and opportunity.
                 </p>
               </div>
               <div class="about-stamp">
-                <div>
-                  <div style="font-size: 0.78rem; color: #6b7280;">
-                    Strategic pillars
-                  </div>
-                  <strong>Protection · Education · Health · Livelihoods</strong>
-                </div>
-                <div style="font-size: 0.72rem; text-align: right;">
-                  Profile updated:<br /><strong>2025</strong>
-                </div>
+                <span>Registered NGO</span>
+                <strong>Somalia</strong>
               </div>
             </aside>
           </div>
@@ -1329,60 +1294,439 @@
         <div class="container">
           <div class="section-header">
             <div class="section-kicker">What we do</div>
-            <h2 class="section-title">Our key focus areas</h2>
+            <h2 class="section-title">Our Focus Areas</h2>
             <p class="section-subtitle">
-              We deliver integrated, multi-sector interventions so that families
-              can move from crisis to stability and long-term resilience.
+              We work across four interconnected pillars to create lasting
+              positive change in the lives of vulnerable families.
             </p>
           </div>
+
           <div class="cards-grid">
-            <article class="card">
-              <div class="card-icon">👩‍👧</div>
-              <h3 class="card-title">Child Protection &amp; GBV</h3>
-              <p>
-                Community-based child protection, psychosocial support, GBV
-                prevention and referral pathways for women and girls.
-              </p>
-              <div class="card-footer">
-                Case management · Safe spaces · Awareness campaigns
-              </div>
-            </article>
-
-            <article class="card">
+            <div class="card">
               <div class="card-icon">📚</div>
-              <h3 class="card-title">Education &amp; Skills</h3>
+              <div class="card-title">Education &amp; Learning</div>
               <p>
-                Support to formal and non-formal education, remedial learning,
-                life-skills and vocational training for adolescents and youth.
+                Providing access to quality education for children and youth,
+                including literacy programs for mothers, vocational training,
+                and life skills development.
               </p>
               <div class="card-footer">
-                Learning support · Youth skills · Teacher engagement
+                Empowering through knowledge
               </div>
-            </article>
+            </div>
 
-            <article class="card">
-              <div class="card-icon">🩺</div>
-              <h3 class="card-title">Health &amp; Nutrition</h3>
+            <div class="card">
+              <div class="card-icon">🛡️</div>
+              <div class="card-title">Child &amp; Women Protection</div>
               <p>
-                Awareness campaigns on maternal, newborn and child health,
-                nutrition education and support to community outreach.
+                Preventing and responding to gender-based violence, child abuse,
+                and exploitation through awareness, safe spaces, psychosocial
+                support, and legal aid.
               </p>
               <div class="card-footer">
-                MNCH · Nutrition counselling · Community mobilization
+                Safeguarding dignity and rights
               </div>
-            </article>
+            </div>
 
-            <article class="card">
-              <div class="card-icon">🌾</div>
-              <h3 class="card-title">Livelihoods &amp; Resilience</h3>
+            <div class="card">
+              <div class="card-icon">🏥</div>
+              <div class="card-title">Health &amp; Nutrition</div>
               <p>
-                Support for women’s income-generation groups, savings schemes
-                and climate-resilient livelihoods in both rural and urban areas.
+                Improving maternal and child health through nutrition programs,
+                health education, access to clean water, and linkages to
+                healthcare services.
               </p>
               <div class="card-footer">
-                Women groups · Small business · Climate-smart options
+                Building healthy communities
               </div>
-            </article>
+            </div>
 
-            <article class="card">
-              <div class="card-icon">🏠</div
+            <div class="card">
+              <div class="card-icon">💼</div>
+              <div class="card-title">Livelihoods &amp; Economic Empowerment</div>
+              <p>
+                Supporting families to achieve economic self-sufficiency through
+                skills training, small business support, savings groups, and
+                income-generating activities.
+              </p>
+              <div class="card-footer">
+                Creating sustainable futures
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-icon">🤝</div>
+              <div class="card-title">Community Mobilization</div>
+              <p>
+                Strengthening community structures, training volunteers, and
+                fostering local leadership to ensure sustainable, community-led
+                development.
+              </p>
+              <div class="card-footer">
+                Building resilient communities
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-icon">🌍</div>
+              <div class="card-title">Emergency Response</div>
+              <p>
+                Providing rapid humanitarian assistance during droughts, floods,
+                and displacement crises, including food, shelter, water, and
+                protection services.
+              </p>
+              <div class="card-footer">
+                Responding to urgent needs
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Impact -->
+      <section id="impact" class="impact">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Our Results</div>
+            <h2 class="section-title">Impact &amp; Reach</h2>
+            <p class="section-subtitle">
+              Measuring our progress and demonstrating tangible change in the
+              communities we serve.
+            </p>
+          </div>
+
+          <div class="impact-grid">
+            <div class="impact-text">
+              <div class="impact-pill">
+                <span></span> 2024 Highlights
+              </div>
+              <p>
+                Since our establishment, Ilays Hooyo Organization has reached
+                thousands of vulnerable families across Somalia, providing
+                integrated support that addresses their most pressing needs.
+              </p>
+              <p>
+                Our programs are designed to create lasting change, building
+                resilience and self-reliance while protecting the dignity and
+                rights of women, children, and youth.
+              </p>
+
+              <div class="timeline">
+                <div class="timeline-item">
+                  <div class="timeline-label">2024</div>
+                  <div>Expanded programs to 3 new regions</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-label">2023</div>
+                  <div>Launched women's economic empowerment initiative</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-label">2022</div>
+                  <div>Established community protection networks</div>
+                </div>
+                <div class="timeline-item">
+                  <div class="timeline-label">2021</div>
+                  <div>Organization founded and registered</div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="stats-row">
+                <div class="stat-card">
+                  <div class="stat-number">1,500+</div>
+                  <div class="stat-caption">Families supported</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">3,200+</div>
+                  <div class="stat-caption">Children reached</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">850+</div>
+                  <div class="stat-caption">Women empowered</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">80+</div>
+                  <div class="stat-caption">Community volunteers</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">12</div>
+                  <div class="stat-caption">Active programs</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">5</div>
+                  <div class="stat-caption">Regions covered</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Programs -->
+      <section id="programs">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Our Work</div>
+            <h2 class="section-title">Programs &amp; Initiatives</h2>
+            <p class="section-subtitle">
+              Integrated programs designed to address the interconnected needs
+              of vulnerable families in Somalia.
+            </p>
+          </div>
+
+          <div class="programs-grid">
+            <div>
+              <ul class="program-list">
+                <li class="program-item">
+                  <div class="program-title">
+                    Mother &amp; Child Nutrition Program
+                  </div>
+                  <div class="program-meta">
+                    <span class="program-pill">Health</span>
+                    <span>Ongoing</span>
+                  </div>
+                  <div class="program-desc">
+                    Addressing malnutrition through supplementary feeding,
+                    nutrition education, and growth monitoring for mothers and
+                    children under 5.
+                  </div>
+                </li>
+
+                <li class="program-item">
+                  <div class="program-title">
+                    Girls' Education Initiative
+                  </div>
+                  <div class="program-meta">
+                    <span class="program-pill">Education</span>
+                    <span>Ongoing</span>
+                  </div>
+                  <div class="program-desc">
+                    Increasing school enrollment and retention for girls through
+                    scholarships, safe learning spaces, and community engagement.
+                  </div>
+                </li>
+
+                <li class="program-item">
+                  <div class="program-title">
+                    Women's Economic Empowerment
+                  </div>
+                  <div class="program-meta">
+                    <span class="program-pill">Livelihoods</span>
+                    <span>Ongoing</span>
+                  </div>
+                  <div class="program-desc">
+                    Supporting women to start and grow small businesses through
+                    skills training, seed grants, and savings groups.
+                  </div>
+                </li>
+
+                <li class="program-item">
+                  <div class="program-title">
+                    Child Protection Network
+                  </div>
+                  <div class="program-meta">
+                    <span class="program-pill">Protection</span>
+                    <span>Ongoing</span>
+                  </div>
+                  <div class="program-desc">
+                    Preventing and responding to child abuse, exploitation, and
+                    violence through community-based protection mechanisms.
+                  </div>
+                </li>
+
+                <li class="program-item">
+                  <div class="program-title">
+                    Emergency Drought Response
+                  </div>
+                  <div class="program-meta">
+                    <span class="program-pill">Emergency</span>
+                    <span>Active</span>
+                  </div>
+                  <div class="program-desc">
+                    Providing life-saving assistance to drought-affected families,
+                    including food, water, and emergency health services.
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div class="stories-grid">
+                <div class="story-card">
+                  <div class="story-name">Amina's Story</div>
+                  <div class="story-label">Women's Empowerment</div>
+                  <p>
+                    "Through the business training and small loan, I started a
+                    tailoring shop. Now I can support my children's education
+                    and we have enough food every day."
+                  </p>
+                </div>
+
+                <div class="story-card">
+                  <div class="story-name">Fatima's Journey</div>
+                  <div class="story-label">Girls' Education</div>
+                  <p>
+                    "I was out of school for 2 years. The scholarship program
+                    brought me back. Now I dream of becoming a teacher to help
+                    other girls like me."
+                  </p>
+                </div>
+
+                <div class="story-card">
+                  <div class="story-name">Community Impact</div>
+                  <div class="story-label">Child Protection</div>
+                  <p>
+                    "Our village now has trained volunteers who watch over our
+                    children. Parents know where to report concerns and children
+                    feel safer."
+                  </p>
+                </div>
+
+                <div class="story-card">
+                  <div class="story-name">Hassan's Progress</div>
+                  <div class="story-label">Child Nutrition</div>
+                  <p>
+                    "My son was severely malnourished. The nutrition program
+                    saved his life. He is now healthy, active, and attending
+                    school regularly."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Partners -->
+      <section class="partners">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Collaboration</div>
+            <h2 class="section-title">Partners &amp; Supporters</h2>
+            <p class="section-subtitle">
+              Working together with local and international partners to maximize
+              our impact and reach.
+            </p>
+          </div>
+
+          <div class="partner-row">
+            <span class="partner-pill">UN Agencies</span>
+            <span class="partner-pill">International NGOs</span>
+            <span class="partner-pill">Local Authorities</span>
+            <span class="partner-pill">Community Organizations</span>
+            <span class="partner-pill">Private Sector</span>
+            <span class="partner-pill">Academic Institutions</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Get in Touch</div>
+            <h2 class="section-title">Contact Us</h2>
+            <p class="section-subtitle">
+              Interested in partnering, supporting our work, or learning more?
+              We'd love to hear from you.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div class="contact-item">
+                <div class="contact-label">Organization</div>
+                <div class="contact-value">Ilays Hooyo Organization (IHO)</div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-label">Email</div>
+                <div class="contact-value">
+                  <a href="mailto:info@ilayshooyo.org">info@ilayshooyo.org</a>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-label">Phone</div>
+                <div class="contact-value">+252 XX XXX XXXX</div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-label">Location</div>
+                <div class="contact-value">Somalia</div>
+              </div>
+
+              <div class="contact-item">
+                <div class="contact-label">Office Hours</div>
+                <div class="contact-value">
+                  Saturday - Thursday<br />
+                  8:00 AM - 4:00 PM (EAT)
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form">
+              <form action="#" method="post">
+                <div class="form-hint">
+                  Fill out the form below and we'll get back to you as soon as
+                  possible.
+                </div>
+
+                <div class="form-group">
+                  <label for="name">Your Name *</label>
+                  <input type="text" id="name" name="name" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Your Email *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subject *</label>
+                  <select id="subject" name="subject" required>
+                    <option value="">Select a topic</option>
+                    <option value="partnership">Partnership Opportunity</option>
+                    <option value="donation">Donation / Support</option>
+                    <option value="volunteer">Volunteer</option>
+                    <option value="media">Media Inquiry</option>
+                    <option value="general">General Question</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Message *</label>
+                  <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary">
+                    Send Message
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span>© 2024 Ilays Hooyo Organization</span>
+        </div>
+        <div class="footer-links">
+          <a href="#about">About</a>
+          <a href="#focus">Focus Areas</a>
+          <a href="#programs">Programs</a>
+          <a href="#impact">Impact</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
