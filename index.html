@@ -1,60 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>Ilay Shooyo | Cost-Effectiveness Enthusiast</title>
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Montserrat', Arial, sans-serif; background: #eaf6fa; margin: 0; padding: 0; color: #222; }
-    header { background: #0099cc; color: #fff; padding: 2rem 0; text-align: center; }
-    header h1 { margin: 0 0 0.5rem 0; font-size: 2.5rem; font-weight: 700; }
-    header p { margin: 0; font-size: 1.25rem; font-weight: 400; letter-spacing: 1px; }
-    main { max-width: 700px; margin: 2rem auto; background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); padding: 2rem; }
-    main h2 { color: #0077aa; font-size: 1.7rem; }
-    section { margin-bottom: 1.8rem; }
-    .cta { text-align: center; margin-top: 2rem; }
-    .cta a { display: inline-block; background: #00b686; color: #fff; text-decoration: none; padding: 0.75rem 1.5rem; border-radius: 4px; font-size: 1.1rem; transition: background 0.20s; }
-    .cta a:hover { background: #009967; }
-    footer { padding: 1rem 0; text-align: center; font-size: 0.95rem; color: #888; background: #f5f5f5; margin-top: 2rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilays Hooyo - Lighting the Way for Somalia's Future</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0a2540;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .logo svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .donate-btn {
+            background-color: #d4af37;
+            color: #0a2540;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .donate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a2540 0%, #1a4567 100%);
+            padding: 120px 2rem 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero::before,
+        .hero::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .hero::before {
+            width: 400px;
+            height: 400px;
+            bottom: -100px;
+            left: -100px;
+        }
+
+        .hero::after {
+            width: 600px;
+            height: 600px;
+            top: -200px;
+            right: -200px;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 .highlight {
+            color: #d4af37;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #d4af37;
+            color: #0a2540;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Mission Section */
+        .mission {
+            padding: 80px 2rem;
+            background-color: #f8f9fa;
+        }
+
+        .mission-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mission h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #0a2540;
+        }
+
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .mission-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .mission-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+        }
+
+        .mission-card h3 {
+            color: #d4af37;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .mission-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a2540;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+                flex-wrap: wrap;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .mission h2 {
+                font-size: 2rem;
+            }
+
+            .mission-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Ilay Shooyo</h1>
-    <p>Cost-Effectiveness Enthusiast&nbsp;&nbsp;|&nbsp;&nbsp;Guiding Better Decisions</p>
-  </header>
-  <main>
-    <section>
-      <h2>Hello, I'm Ilay!</h2>
-      <p>
-        Passionate about helping organizations and individuals make smart, cost-effective choices. My mission is to guide better decisions—so you can achieve more with your resources.
-      </p>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                    <path d="M2 2l7.586 7.586"></path>
+                    <circle cx="11" cy="11" r="2"></circle>
+                </svg>
+                Ilays
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#work">Our Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#donate" class="donate-btn">DONATE NOW</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                <span class="highlight">Ilays Hooyo:</span> Lighting the Way for Somalia's Future
+            </h1>
+            <p>
+                Empowering vulnerable mothers and children in Somalia with hope, health, and education to build resilient communities.
+            </p>
+            <a href="#impact" class="cta-btn">See Our Impact</a>
+        </div>
     </section>
-    <section>
-      <h2>What is Cost Effectiveness?</h2>
-      <p>
-        Cost effectiveness means making the smartest use of resources to achieve the best possible outcomes. It's about maximizing impact while minimizing waste!
-      </p>
+
+    <!-- Mission Section -->
+    <section class="mission" id="impact">
+        <div class="mission-content">
+            <h2>Our Mission in Action</h2>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <h3>Healthcare Access</h3>
+                    <p>
+                        Providing essential healthcare services to mothers and children in underserved communities across Somalia, ensuring access to medical care and nutrition support.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <h3>Education Programs</h3>
+                    <p>
+                        Building educational opportunities for children and literacy programs for mothers, creating pathways to brighter futures through knowledge and skills development.
+                    </p>
+                </div>
+                <div class="mission-card">
+                    <h3>Community Development</h3>
+                    <p>
+                        Strengthening communities through sustainable development initiatives, empowering families to build resilience and create lasting positive change.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
-    <section>
-      <h2>Why Does It Matter?</h2>
-      <p>
-        Whether you're a nonprofit, a business, or just making personal choices, understanding cost effectiveness helps you get the most value for every dollar spent.
-      </p>
-    </section>
-    <section>
-      <h2>How Can I Help You?</h2>
-      <p>
-        I offer insights, frameworks, and friendly advice to help you evaluate options and choose wisely. Let's work together to make strategic decisions for your goals.
-      </p>
-    </section>
-    <div class="cta">
-      <a href="mailto:ilayshooyo@gmail.com">Let's Connect</a>
-    </div>
-  </main>
-  <footer>
-    &copy; 2025 Ilay Shooyo. Crafted with care. 
-  </footer>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ilays Hooyo. All rights reserved.</p>
+    </footer>
 </body>
 </html>
