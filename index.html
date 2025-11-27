@@ -1,316 +1,1388 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ilays Hooyo - Lighting the Way for Somalia's Future</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8" />
+  <title>Ilays-Hooyo Organization</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Ilays-Hooyo Organization – a community-driven initiative supporting mothers, children and youth through education, protection and livelihoods."
+  />
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
+  <!-- Google Font (optional, safe for GitHub Pages) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
 
-        /* Header Styles */
-        header {
-            background-color: #0a2540;
-            padding: 1rem 2rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+  <style>
+    :root {
+      --navy: #0c3463;
+      --gold: #daa520;
+      --cream: #faf8f0;
+      --dark: #1b1f2a;
+      --muted: #6b7280;
+      --white: #ffffff;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.12);
+      --radius-xl: 20px;
+      --radius-2xl: 28px;
+      --transition-fast: 0.2s ease-out;
+    }
 
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: white;
-        }
+    body {
+      font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #fdfcf8 0%, #f4f2eb 100%);
+      color: var(--dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
 
-        .logo svg {
-            width: 30px;
-            height: 30px;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            list-style: none;
-        }
+    img {
+      max-width: 100%;
+      display: block;
+    }
 
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
+    /* Layout */
 
-        .nav-links a:hover {
-            opacity: 0.8;
-        }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-        .donate-btn {
-            background-color: #d4af37;
-            color: #0a2540;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
 
-        .donate-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
-        }
+    /* Header / Nav */
 
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0a2540 0%, #1a4567 100%);
-            padding: 120px 2rem 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      backdrop-filter: blur(18px);
+      background: linear-gradient(
+        120deg,
+        rgba(250, 248, 240, 0.98),
+        rgba(247, 244, 233, 0.96)
+      );
+      border-bottom: 1px solid rgba(15, 23, 42, 0.04);
+    }
 
-        .hero::before,
-        .hero::after {
-            content: '';
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.05);
-        }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+      gap: 1rem;
+    }
 
-        .hero::before {
-            width: 400px;
-            height: 400px;
-            bottom: -100px;
-            left: -100px;
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
 
-        .hero::after {
-            width: 600px;
-            height: 600px;
-            top: -200px;
-            right: -200px;
-            background: rgba(255, 255, 255, 0.03);
-        }
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 20%, #fff8e1, #f6e1a4);
+      border: 2px solid rgba(218, 165, 32, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--navy);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    }
 
-        .hero-content {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
 
-        .hero h1 {
-            font-size: 3rem;
-            color: white;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
+    .brand-name {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      font-size: 1.02rem;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
 
-        .hero h1 .highlight {
-            color: #d4af37;
-        }
+    .brand-tagline {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
 
-        .hero p {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-size: 0.9rem;
+    }
 
-        .cta-btn {
-            display: inline-block;
-            background-color: #d4af37;
-            color: #0a2540;
-            padding: 1rem 2.5rem;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+    .nav-links a {
+      position: relative;
+      color: #374151;
+      font-weight: 500;
+      padding-bottom: 0.15rem;
+    }
 
-        .cta-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
-        }
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.1rem;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--navy));
+      border-radius: 999px;
+      transition: width var(--transition-fast);
+    }
 
-        /* Mission Section */
-        .mission {
-            padding: 80px 2rem;
-            background-color: #f8f9fa;
-        }
+    .nav-links a:hover::after {
+      width: 100%;
+    }
 
-        .mission-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
 
-        .mission h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            color: #0a2540;
-        }
+    .btn {
+      border-radius: 999px;
+      border: none;
+      padding: 0.5rem 1.1rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast),
+        background var(--transition-fast), color var(--transition-fast);
+      white-space: nowrap;
+    }
 
-        .mission-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--navy), #102a4d);
+      color: var(--white);
+      box-shadow: 0 16px 35px rgba(15, 23, 42, 0.35);
+    }
 
-        .mission-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.45);
+    }
 
-        .mission-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
-        }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.9);
+      color: var(--navy);
+      border: 1px solid rgba(12, 52, 99, 0.35);
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+    }
 
-        .mission-card h3 {
-            color: #d4af37;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
+    .btn-outline:hover {
+      background: #eef1f7;
+      transform: translateY(-1px);
+    }
 
-        .mission-card p {
-            color: #666;
-            line-height: 1.8;
-        }
+    .nav-toggle {
+      display: none;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
 
-        /* Footer */
-        footer {
-            background-color: #0a2540;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-        }
+    .nav-toggle span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      margin: 4px 0;
+      background: #111827;
+      border-radius: 999px;
+    }
 
-        footer p {
-            opacity: 0.8;
-        }
+    /* Hero */
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                gap: 1rem;
-                flex-wrap: wrap;
-            }
+    .hero {
+      padding: 3.2rem 0 2.8rem;
+    }
 
-            .hero h1 {
-                font-size: 2rem;
-            }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 3fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
 
-            .hero p {
-                font-size: 1rem;
-            }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+      background: rgba(218, 165, 32, 0.1);
+      border: 1px solid rgba(218, 165, 32, 0.55);
+      color: #7a5a12;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.8rem;
+    }
 
-            .mission h2 {
-                font-size: 2rem;
-            }
+    .hero-title {
+      font-size: clamp(2.1rem, 3.1vw, 2.7rem);
+      line-height: 1.15;
+      color: #0f172a;
+      margin-bottom: 0.85rem;
+    }
 
-            .mission-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    .hero-title span {
+      color: var(--navy);
+    }
+
+    .hero-subtitle {
+      font-size: 0.98rem;
+      color: #4b5563;
+      max-width: 520px;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-subtitle strong {
+      color: #111827;
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.4rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .hero-meta-label {
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      font-size: 0.7rem;
+      color: #9ca3af;
+    }
+
+    .hero-meta-value {
+      font-weight: 600;
+      color: #111827;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at 0% 0%, #ffffff, #f3eee0);
+      border-radius: var(--radius-2xl);
+      padding: 1.8rem 1.6rem;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 23, 42, 0.05);
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 1.4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: -40%;
+      background: radial-gradient(
+        circle at 80% 0%,
+        rgba(218, 165, 32, 0.2),
+        transparent 55%
+      );
+      opacity: 0.7;
+      pointer-events: none;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-pill {
+      padding: 0.25rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(12, 52, 99, 0.08);
+      color: #1f2933;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #10b981;
+      box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.25);
+    }
+
+    .hero-card-badge {
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(236, 253, 245, 0.9);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      font-size: 0.7rem;
+      color: #065f46;
+    }
+
+    .hero-card-body {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 3.2fr) minmax(0, 2.4fr);
+      gap: 1.7rem;
+      align-items: center;
+    }
+
+    .hero-card-text h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: #111827;
+    }
+
+    .hero-card-text p {
+      font-size: 0.85rem;
+      color: #4b5563;
+      margin-bottom: 0.8rem;
+    }
+
+    .hero-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.7);
+      font-size: 0.7rem;
+      color: #4b5563;
+      background: rgba(255, 255, 255, 0.8);
+    }
+
+    .hero-card-stats {
+      padding: 0.9rem 0.85rem;
+      border-radius: 18px;
+      background: rgba(15, 23, 42, 0.96);
+      color: var(--white);
+      display: grid;
+      gap: 0.7rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-card-stats-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.8rem;
+      border-bottom: 1px dashed rgba(148, 163, 184, 0.55);
+      padding-bottom: 0.4rem;
+    }
+
+    .hero-card-stats-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      color: #cbd5f5;
+      max-width: 140px;
+    }
+
+    .stat-value {
+      font-weight: 600;
+      font-size: 0.9rem;
+      white-space: nowrap;
+    }
+
+    /* Sections */
+
+    section {
+      padding: 2.5rem 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 1.8rem;
+    }
+
+    .section-kicker {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--gold);
+      margin-bottom: 0.35rem;
+      font-weight: 600;
+    }
+
+    .section-title {
+      font-size: 1.6rem;
+      margin-bottom: 0.45rem;
+      color: #111827;
+    }
+
+    .section-subtitle {
+      max-width: 640px;
+      margin: 0.25rem auto 0;
+      font-size: 0.95rem;
+      color: #6b7280;
+    }
+
+    /* About */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 3.2fr) minmax(0, 3fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    .about-text p {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin-bottom: 1rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    .about-highlight {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 0.9rem 0.9rem;
+      border: 1px solid rgba(15, 23, 42, 0.05);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      font-size: 0.85rem;
+    }
+
+    .about-highlight-title {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: #111827;
+    }
+
+    .about-highlight p {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 0.4rem;
+    }
+
+    .about-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.4rem;
+      margin-bottom: 0.4rem;
+      font-size: 0.85rem;
+      color: #4b5563;
+    }
+
+    .about-list span {
+      font-size: 0.8rem;
+      color: var(--gold);
+      margin-top: 0.1rem;
+    }
+
+    .about-card {
+      background: radial-gradient(circle at 10% 0%, #ffffff, #f6f1df);
+      border-radius: 22px;
+      padding: 1.3rem 1.15rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      box-shadow: 0 18px 38px rgba(15, 23, 42, 0.18);
+      display: grid;
+      gap: 0.9rem;
+    }
+
+    .about-mission,
+    .about-vision {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 0.9rem 0.9rem;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      font-size: 0.85rem;
+    }
+
+    .pill-heading {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--navy);
+      margin-bottom: 0.25rem;
+      font-weight: 600;
+    }
+
+    .about-stamp {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #4b5563;
+    }
+
+    .about-stamp strong {
+      color: #111827;
+    }
+
+    /* Focus Areas */
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: 18px;
+      padding: 1.1rem 1rem;
+      border: 1px solid rgba(15, 23, 42, 0.05);
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      font-size: 0.88rem;
+    }
+
+    .card-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: rgba(12, 52, 99, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      color: #111827;
+      margin-top: 0.1rem;
+    }
+
+    .card p {
+      font-size: 0.82rem;
+      color: #4b5563;
+    }
+
+    .card-footer {
+      margin-top: 0.35rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* Impact Stats */
+
+    .impact {
+      background: radial-gradient(circle at top, #fffdf4, #f2ebd8);
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 3.3fr);
+      gap: 1.6rem;
+      align-items: center;
+    }
+
+    .impact-text p {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 0.7rem;
+    }
+
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-top: 0.8rem;
+    }
+
+    .stat-card {
+      background: #111827;
+      color: var(--white);
+      border-radius: 18px;
+      padding: 0.9rem 0.8rem;
+      box-shadow: 0 18px 32px rgba(15, 23, 42, 0.38);
+    }
+
+    .stat-number {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.1rem;
+    }
+
+    .stat-caption {
+      font-size: 0.78rem;
+      color: #e5e7eb;
+    }
+
+    .impact-pill {
+      font-size: 0.75rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(17, 24, 39, 0.14);
+      color: #374151;
+      background: rgba(255, 255, 255, 0.88);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .impact-pill span {
+      width: 6px;
+      height: 16px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, var(--gold), var(--navy));
+    }
+
+    .timeline {
+      border-left: 2px solid rgba(156, 163, 175, 0.6);
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      font-size: 0.82rem;
+      color: #4b5563;
+    }
+
+    .timeline-item {
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -1.1rem;
+      top: 0.18rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--gold);
+      border: 2px solid #fefce8;
+    }
+
+    .timeline-label {
+      font-weight: 600;
+      color: #111827;
+      font-size: 0.8rem;
+    }
+
+    /* Programs */
+
+    .programs-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 2.3fr);
+      gap: 1.7rem;
+      align-items: flex-start;
+    }
+
+    .program-list {
+      list-style: none;
+      display: grid;
+      gap: 0.7rem;
+      font-size: 0.85rem;
+    }
+
+    .program-item {
+      background: var(--white);
+      border-radius: 14px;
+      padding: 0.75rem 0.8rem;
+      border: 1px solid rgba(148, 163, 184, 0.38);
+      display: grid;
+      gap: 0.25rem;
+    }
+
+    .program-title {
+      font-weight: 600;
+      color: #111827;
+      font-size: 0.86rem;
+    }
+
+    .program-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      color: #6b7280;
+    }
+
+    .program-pill {
+      padding: 0.15rem 0.55rem;
+      border-radius: 999px;
+      background: rgba(12, 52, 99, 0.06);
+      color: #1f2937;
+    }
+
+    .program-desc {
+      font-size: 0.8rem;
+      color: #4b5563;
+    }
+
+    .stories-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+    }
+
+    .story-card {
+      border-radius: 14px;
+      background: #111827;
+      color: #f9fafb;
+      padding: 0.8rem 0.8rem;
+      font-size: 0.82rem;
+      box-shadow: 0 16px 34px rgba(15, 23, 42, 0.35);
+    }
+
+    .story-name {
+      font-weight: 600;
+      font-size: 0.8rem;
+      margin-bottom: 0.15rem;
+    }
+
+    .story-label {
+      font-size: 0.74rem;
+      color: #9ca3af;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Partners */
+
+    .partners {
+      background: var(--white);
+    }
+
+    .partner-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .partner-pill {
+      border-radius: 999px;
+      padding: 0.55rem 1rem;
+      border: 1px dashed rgba(148, 163, 184, 0.7);
+      font-size: 0.8rem;
+      background: #f9fafb;
+      color: #4b5563;
+    }
+
+    /* Contact */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.7fr) minmax(0, 2.3fr);
+      gap: 1.7rem;
+      align-items: flex-start;
+    }
+
+    .contact-card {
+      background: #111827;
+      color: var(--white);
+      border-radius: 20px;
+      padding: 1.3rem 1.2rem;
+      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.45);
+      font-size: 0.86rem;
+    }
+
+    .contact-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-block {
+      margin-top: 0.7rem;
+    }
+
+    .contact-label {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+      color: #9ca3af;
+      margin-bottom: 0.1rem;
+    }
+
+    .contact-value {
+      font-size: 0.86rem;
+      color: #e5e7eb;
+    }
+
+    .contact-value a {
+      color: #e5e7eb;
+      text-decoration: underline;
+      text-decoration-color: rgba(236, 252, 203, 0.6);
+      text-decoration-thickness: 1px;
+    }
+
+    .contact-note {
+      margin-top: 0.7rem;
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    form {
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 20px;
+      padding: 1.2rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+      font-size: 0.86rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+    }
+
+    .form-group {
+      margin-bottom: 0.8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
+
+    label {
+      font-size: 0.78rem;
+      color: #4b5563;
+      font-weight: 500;
+    }
+
+    input,
+    textarea,
+    select {
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.9);
+      padding: 0.55rem 0.8rem;
+      font-family: inherit;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color var(--transition-fast),
+        box-shadow var(--transition-fast), background var(--transition-fast);
+    }
+
+    textarea {
+      border-radius: 14px;
+      resize: vertical;
+      min-height: 110px;
+      line-height: 1.5;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--navy);
+      box-shadow: 0 0 0 1px rgba(12, 52, 99, 0.25);
+      background: #f9fafb;
+    }
+
+    .form-hint {
+      font-size: 0.75rem;
+      color: #9ca3af;
+      margin-bottom: 0.4rem;
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 0.3rem;
+    }
+
+    /* Footer */
+
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 1.1rem 0 1.4rem;
+      background: #0b1020;
+      color: #9ca3af;
+      font-size: 0.8rem;
+      margin-top: 2rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .footer-brand span {
+      color: #e5e7eb;
+      font-weight: 500;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .footer-links a {
+      color: #9ca3af;
+    }
+
+    .footer-links a:hover {
+      color: #e5e7eb;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .about-grid,
+      .impact-grid,
+      .programs-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 2.4rem;
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      .cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .stats-row {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-toggle {
+        display: inline-flex;
+        flex-direction: column;
+      }
+
+      .nav-mobile-open .nav-links,
+      .nav-mobile-open .nav-cta {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-top: 0.7rem;
+      }
+
+      .nav-mobile-open .nav {
+        flex-wrap: wrap;
+      }
+
+      .hero-grid {
+        gap: 2rem;
+      }
+
+      .hero-title {
+        font-size: 1.9rem;
+      }
+
+      .cards-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .stories-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .stats-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      footer {
+        text-align: center;
+      }
+
+      .footer-inner {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+
+  <script>
+    // Simple mobile nav toggle
+    document.addEventListener("DOMContentLoaded", function () {
+      var toggle = document.querySelector(".nav-toggle");
+      var header = document.querySelector("header");
+      if (!toggle || !header) return;
+
+      toggle.addEventListener("click", function () {
+        header.classList.toggle("nav-mobile-open");
+      });
+    });
+  </script>
 </head>
 <body>
+  <div class="page">
     <!-- Header -->
     <header>
-        <nav>
-            <div class="logo">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
-                    <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
-                    <path d="M2 2l7.586 7.586"></path>
-                    <circle cx="11" cy="11" r="2"></circle>
-                </svg>
-                Ilays
-            </div>
-            <ul class="nav-links">
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#work">Our Work</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#donate" class="donate-btn">DONATE NOW</a></li>
-            </ul>
+      <div class="container nav">
+        <div class="brand">
+          <!-- TODO: Replace this circle with your logo image if you prefer -->
+          <!-- <img src="assets/ilays-hooyo-logo.png" alt="Ilays-Hooyo logo" class="brand-logo-img" /> -->
+          <div class="brand-logo">IH</div>
+          <div class="brand-text">
+            <div class="brand-name">Ilays-Hooyo Organization</div>
+            <div class="brand-tagline">Nurturing hope · Protecting dignity</div>
+          </div>
+        </div>
+
+        <nav class="nav-links">
+          <a href="#about">About</a>
+          <a href="#focus">Focus Areas</a>
+          <a href="#programs">Programs</a>
+          <a href="#impact">Impact</a>
+          <a href="#contact">Contact</a>
         </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-outline" href="#impact">Our Results</a>
+          <!-- Update the href to your real PDF when ready -->
+          <a class="btn btn-primary" href="assets/Ilays-Hooyo-Profile.pdf" target="_blank">
+            Download Profile
+          </a>
+        </div>
+
+        <button class="nav-toggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>
-                <span class="highlight">Ilays Hooyo:</span> Lighting the Way for Somalia's Future
-            </h1>
-            <p>
-                Empowering vulnerable mothers and children in Somalia with hope, health, and education to build resilient communities.
-            </p>
-            <a href="#impact" class="cta-btn">See Our Impact</a>
-        </div>
-    </section>
-
-    <!-- Mission Section -->
-    <section class="mission" id="impact">
-        <div class="mission-content">
-            <h2>Our Mission in Action</h2>
-            <div class="mission-grid">
-                <div class="mission-card">
-                    <h3>Healthcare Access</h3>
-                    <p>
-                        Providing essential healthcare services to mothers and children in underserved communities across Somalia, ensuring access to medical care and nutrition support.
-                    </p>
-                </div>
-                <div class="mission-card">
-                    <h3>Education Programs</h3>
-                    <p>
-                        Building educational opportunities for children and literacy programs for mothers, creating pathways to brighter futures through knowledge and skills development.
-                    </p>
-                </div>
-                <div class="mission-card">
-                    <h3>Community Development</h3>
-                    <p>
-                        Strengthening communities through sustainable development initiatives, empowering families to build resilience and create lasting positive change.
-                    </p>
-                </div>
+    <!-- Main -->
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="hero-badge">
+              <span>Community-based, women-centered initiative</span>
             </div>
-        </div>
-    </section>
+            <h1 class="hero-title">
+              Lighting the path for
+              <span>mothers, children &amp; youth</span>.
+            </h1>
+            <p class="hero-subtitle">
+              Ilays-Hooyo Organization (IHO) is a non-profit, non-political and
+              community-driven organization working to
+              <strong>protect, empower and uplift vulnerable families</strong>
+              through education, protection, health and livelihoods support.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">
+                Partner with us
+              </a>
+              <a href="#programs" class="btn btn-outline">
+                Explore our programs
+              </a>
+            </div>
+            <div class="hero-meta">
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Primary focus</span>
+                <span class="hero-meta-value">Women, children &amp; youth</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Geographic coverage</span>
+                <span class="hero-meta-value">Somalia (urban &amp; rural)</span>
+              </div>
+              <div class="hero-meta-item">
+                <span class="hero-meta-label">Legal status</span>
+                <span class="hero-meta-value">Registered local NGO</span>
+              </div>
+            </div>
+          </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Ilays Hooyo. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+          <aside class="hero-card" aria-label="Ilays-Hooyo at a glance">
+            <div class="hero-card-header">
+              <div class="hero-pill">
+                <span class="hero-pill-dot"></span> Active in communities
+              </div>
+              <div class="hero-card-badge">Child &amp; women protection</div>
+            </div>
+            <div class="hero-card-body">
+              <div class="hero-card-text">
+                <h3>At a glance</h3>
+                <p>
+                  We design and implement integrated, community-owned
+                  interventions that respond to urgent needs while building
+                  long-term resilience and dignity.
+                </p>
+                <div class="hero-card-tags">
+                  <span class="tag">Education</span>
+                  <span class="tag">Protection</span>
+                  <span class="tag">Health &amp; Nutrition</span>
+                  <span class="tag">Livelihoods</span>
+                </div>
+              </div>
+              <div class="hero-card-stats">
+                <div class="hero-card-stats-row">
+                  <div class="stat-label">Families directly supported*</div>
+                  <div class="stat-value">1,500+</div>
+                </div>
+                <div class="hero-card-stats-row">
+                  <div class="stat-label">Women &amp; girls reached*</div>
+                  <div class="stat-value">65%</div>
+                </div>
+                <div class="hero-card-stats-row">
+                  <div class="stat-label">
+                    Community volunteers trained*
+                  </div>
+                  <div class="stat-value">80+</div>
+                </div>
+                <div class="hero-card-stats-row">
+                  <div class="stat-label">
+                    *Illustrative figures – update with your real data
+                  </div>
+                  <div class="stat-value"></div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Who we are</div>
+            <h2 class="section-title">About Ilays-Hooyo Organization</h2>
+            <p class="section-subtitle">
+              “Ilays-Hooyo” means the light of the mother – symbolizing care,
+              stability and hope at the heart of every family and community.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-text">
+              <p>
+                Ilays-Hooyo Organization is a Somali-led, non-profit organization
+                committed to supporting vulnerable families – especially women,
+                children and youth – affected by conflict, displacement, poverty
+                and recurrent shocks such as droughts.
+              </p>
+              <p>
+                We work hand-in-hand with communities, local authorities and
+                partners to design context-appropriate solutions that protect
+                children, empower women, and expand opportunities for youth.
+              </p>
+
+              <ul class="about-list">
+                <li>
+                  <span>◆</span>
+                  <div>
+                    <strong>Community-rooted:</strong> founded and led by local
+                    professionals who understand the realities on the ground.
+                  </div>
+                </li>
+                <li>
+                  <span>◆</span>
+                  <div>
+                    <strong>Gender-responsive:</strong> programs designed to
+                    protect, empower and listen to women and girls.
+                  </div>
+                </li>
+                <li>
+                  <span>◆</span>
+                  <div>
+                    <strong>Child-focused:</strong> promoting safe, nurturing
+                    and inclusive environments for all children.
+                  </div>
+                </li>
+              </ul>
+
+              <div class="about-highlights">
+                <div class="about-highlight">
+                  <div class="about-highlight-title">Legal Identity</div>
+                  <p>
+                    Registered as a local NGO in Somalia in line with national
+                    regulations (insert registration details here).
+                  </p>
+                </div>
+                <div class="about-highlight">
+                  <div class="about-highlight-title">Core Values</div>
+                  <p>
+                    Compassion, accountability, integrity, inclusion, and
+                    community ownership guide all our work.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <aside class="about-card">
+              <div class="about-mission">
+                <div class="pill-heading">Our mission</div>
+                <p>
+                  To protect and empower vulnerable women, children and youth by
+                  providing inclusive services, strengthening community systems
+                  and promoting sustainable livelihoods and education.
+                </p>
+              </div>
+              <div class="about-vision">
+                <div class="pill-heading">Our vision</div>
+                <p>
+                  A peaceful and inclusive society where every mother, child and
+                  young person lives in dignity, safety and hope, with equal
+                  access to opportunities.
+                </p>
+              </div>
+              <div class="about-stamp">
+                <div>
+                  <div style="font-size: 0.78rem; color: #6b7280;">
+                    Strategic pillars
+                  </div>
+                  <strong>Protection · Education · Health · Livelihoods</strong>
+                </div>
+                <div style="font-size: 0.72rem; text-align: right;">
+                  Profile updated:<br /><strong>2025</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Focus Areas -->
+      <section id="focus">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">What we do</div>
+            <h2 class="section-title">Our key focus areas</h2>
+            <p class="section-subtitle">
+              We deliver integrated, multi-sector interventions so that families
+              can move from crisis to stability and long-term resilience.
+            </p>
+          </div>
+          <div class="cards-grid">
+            <article class="card">
+              <div class="card-icon">👩‍👧</div>
+              <h3 class="card-title">Child Protection &amp; GBV</h3>
+              <p>
+                Community-based child protection, psychosocial support, GBV
+                prevention and referral pathways for women and girls.
+              </p>
+              <div class="card-footer">
+                Case management · Safe spaces · Awareness campaigns
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">📚</div>
+              <h3 class="card-title">Education &amp; Skills</h3>
+              <p>
+                Support to formal and non-formal education, remedial learning,
+                life-skills and vocational training for adolescents and youth.
+              </p>
+              <div class="card-footer">
+                Learning support · Youth skills · Teacher engagement
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">🩺</div>
+              <h3 class="card-title">Health &amp; Nutrition</h3>
+              <p>
+                Awareness campaigns on maternal, newborn and child health,
+                nutrition education and support to community outreach.
+              </p>
+              <div class="card-footer">
+                MNCH · Nutrition counselling · Community mobilization
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">🌾</div>
+              <h3 class="card-title">Livelihoods &amp; Resilience</h3>
+              <p>
+                Support for women’s income-generation groups, savings schemes
+                and climate-resilient livelihoods in both rural and urban areas.
+              </p>
+              <div class="card-footer">
+                Women groups · Small business · Climate-smart options
+              </div>
+            </article>
+
+            <article class="card">
+              <div class="card-icon">🏠</div
